@@ -1,5 +1,8 @@
 package at.htl;
 
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.SimpleLayout;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -8,7 +11,13 @@ import java.io.IOException;
 
 public class WebScraper {
 
-    public static void main(String[] args) throws InterruptedException {
+    private static Logger logger = Logger.getLogger(WebScraper.class);
+
+    public static void main(String[] args) throws InterruptedException, IOException {
+        SimpleLayout layout = new SimpleLayout();
+        FileAppender appender = new FileAppender(layout,"webCamScrapper.log",false);
+        logger.addAppender(appender);
+
         for(;;){
             scrapWebcam();
             Thread.sleep(1000);
@@ -30,6 +39,6 @@ public class WebScraper {
             e.printStackTrace();
         }
 
-        System.out.println(source);
+        logger.info(source);
     }
 }

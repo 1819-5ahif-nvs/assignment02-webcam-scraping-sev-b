@@ -3,37 +3,37 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/404.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/not_supported.html">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/at/htl/WebScraper.java">
+        <entry key="$PROJECT_DIR$/src/main/java/IndexWriter.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../WebScraperHTTP/404.html">
+        <entry key="$PROJECT_DIR$/src/main/java/WebScraperHTTP.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/../WebScraperHTTP/index.html">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../WebScraperHTTP/not_supported.html">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../WebScraperHTTP/pom.xml">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/../WebScraperHTTP/src/main/java/WebScraperHTTP.java">
+        <entry key="$PROJECT_DIR$/src/main/java/WebScraperServer.java">
           <value>
             <set />
           </value>
