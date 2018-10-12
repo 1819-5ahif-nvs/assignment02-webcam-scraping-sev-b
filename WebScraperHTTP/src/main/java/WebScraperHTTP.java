@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
 
 public class WebScraperHTTP {
 
-    public static final String DEFAULT_FILE = "index.html";
+    public static final String DEFAULT_FILE = "./index.html";
     private static final int PORT = 8080;
     // verbose mode
     public static final boolean verbose = true;
@@ -29,7 +29,7 @@ public class WebScraperHTTP {
                 WebScraperServer httpServer = new WebScraperServer(serverConnect.accept());
 
                 if (verbose) {
-                    System.out.println("Connecton opened. (" + new Date() + ")");
+                    System.out.println("Connection opened. (" + new Date() + ")");
                 }
 
                 Thread serverThread = new Thread(httpServer);

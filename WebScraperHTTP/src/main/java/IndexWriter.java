@@ -20,7 +20,7 @@ public class IndexWriter implements Runnable {
             writeToIndex(latest);
             //}
             try {
-                Thread.sleep(1000);
+                Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -47,9 +47,9 @@ public class IndexWriter implements Runnable {
     private static void writeToIndex(String source) {
         try {
             File index = new File(WebScraperHTTP.DEFAULT_FILE);
-            Document report = null;
-            report = Jsoup.parse(source, "UTF-8");
+            Document report = Jsoup.parse(index, "UTF-8");
             Elements dom = report.children();
+
             Timestamp ts = new Timestamp((long)(new Date().getTime()));
             dom.select("#link_table").append("<tr><td><a href=\"" + source + "\">"+ ts +"</a></td></tr>");
             if(!index.canWrite()){
@@ -59,7 +59,7 @@ public class IndexWriter implements Runnable {
             bw = new BufferedWriter(new FileWriter(index));
             bw.write(dom.toString());
             bw.close();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
